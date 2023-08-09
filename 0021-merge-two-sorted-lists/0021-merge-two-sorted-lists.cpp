@@ -47,7 +47,9 @@ public:
         while (g->next->next!=nullptr){
             g = g->next;
         }
+        ListNode* t = g->next;
         g->next = nullptr;
+        delete t;
         return p; 
     }
 };
