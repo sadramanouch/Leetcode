@@ -12,12 +12,12 @@
 class Solution {
 public:
     TreeNode* helper(TreeNode* root) {
-        if(root == NULL)
+        if(root == NULL){
             return NULL;
-
-        if(root->left == NULL && root->right == NULL)
+        }
+        if(root->left == NULL && root->right == NULL){
             return NULL;
-
+        }
         if(root->right == NULL) {
             root->right = root->left;
             root->left = NULL;
@@ -26,19 +26,14 @@ public:
             root->left = root->right;
             root->right = NULL;
         }
-
-
         else {
             TreeNode* temp = root->left;
-        root->left = root->right;
-        root->right = temp;
+            root->left = root->right;
+            root->right = temp;
         }
-
         helper(root->left);
         helper(root->right);
-
-        return root;
-        
+        return root; 
     }
 
     TreeNode* invertTree(TreeNode* root) {
