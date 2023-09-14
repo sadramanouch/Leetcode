@@ -12,6 +12,7 @@ public:
             }
             else{
                 res = nums[i];
+                return res;
             }
         }
         return res;
