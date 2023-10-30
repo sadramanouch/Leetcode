@@ -12,7 +12,8 @@ public:
                 q.push_back(q.front());k++;
             }
             else {
-                k=0;i++;
+                k=0;
+                i++;
             }
             q.pop_front();
         }
