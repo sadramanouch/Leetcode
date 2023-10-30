@@ -9,7 +9,8 @@ public:
         int k=0;
         while(q.size()!=0 && k!=q.size()){
             if(q.front()!=sandwiches[i]){
-                q.push_back(q.front());k++;
+                q.push_back(q.front());
+                k++;
             }
             else {
                 k=0;
