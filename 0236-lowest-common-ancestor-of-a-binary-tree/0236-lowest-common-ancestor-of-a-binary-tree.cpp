@@ -16,17 +16,15 @@ public:
         if (p == root || q == root){
             return root;
         }
-        TreeNode *left;
-        TreeNode *right;
-        left = lowestCommonAncestor(root->left, p, q);
-        right = lowestCommonAncestor(root->right, p, q);
+        TreeNode *left = lowestCommonAncestor(root->left, p, q);
+        TreeNode *right = lowestCommonAncestor(root->right, p, q);
         if (left != nullptr && right != nullptr){
             return root;
         }
         if (left != nullptr){
             return left;
         }
-        if (right != nullptr){
+        else{
             return right;
         }
         return NULL;
