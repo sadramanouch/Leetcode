@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func findTheDifference(s string, t string) byte {
-    charCount := make(map[rune]int)
+    charCount := make(map[byte]int)
     for _, char := range s {
-        charCount[char]++
+        charCount[byte(char)]++
     }
     for _, char := range t {
-        charCount[char]--
+        charCount[byte(char)]--
     }
     for char, count := range charCount {
         if count == -1 {
