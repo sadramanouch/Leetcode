@@ -9,15 +9,18 @@ public:
             if (j < m && (p[j] == s[i] || p[j] == '?')) {
                 i++;
                 j++;
-            } else if (j < m && p[j] == '*') {
+            } 
+            else if (j < m && p[j] == '*') {
                 starIdx = j;
                 match = i;
                 j++;
-            } else if (starIdx != -1) {
+            } 
+            else if (starIdx != -1) {
                 j = starIdx + 1;
                 match++;
                 i = match;
-            } else {
+            } 
+            else {
                 return false;
             }
         }
