@@ -6,13 +6,11 @@ class Solution {
 public:
     int uniqueMorseRepresentations(vector<string>& words) {
         unordered_map<string, bool> hash;
-
         vector<string> morseCodes = {
             ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
             "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
             "..-", "...-", ".--", "-..-", "-.--", "--.."
         };
-
         for (int i = 0; i < words.size(); i++) {
             string res = "";
             for (int j = 0; j < words[i].size(); j++) {
@@ -22,7 +20,6 @@ public:
             }
             hash[res] = true;
         }
-
         return hash.size();
     }
 };
