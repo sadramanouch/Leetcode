@@ -2,10 +2,10 @@
 
 class SubrectangleQueries {
 private:
-    std::vector<std::vector<int>> rectangle;
+    vector<std::vector<int>> rectangle;
 
 public:
-    SubrectangleQueries(std::vector<std::vector<int>>& rect) {
+    SubrectangleQueries(vector<vector<int>>& rect) {
         rectangle = rect;
     }
 
