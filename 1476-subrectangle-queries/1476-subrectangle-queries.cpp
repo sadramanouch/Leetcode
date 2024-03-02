@@ -2,7 +2,7 @@
 
 class SubrectangleQueries {
 private:
-    vector<std::vector<int>> rectangle;
+    vector<vector<int>> rectangle;
 
 public:
     SubrectangleQueries(vector<vector<int>>& rect) {
