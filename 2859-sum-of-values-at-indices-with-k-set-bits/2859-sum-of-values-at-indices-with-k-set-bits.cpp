@@ -9,7 +9,7 @@ public:
         return count;
     }
 
-    int sumIndicesWithKSetBits(std::vector<int>& nums, int k) {
+    int sumIndicesWithKSetBits(vector<int>& nums, int k) {
         int sum = 0;
         for (int i = 0; i < nums.size(); ++i) {
             int setBitsCount = countSetBits(i);
