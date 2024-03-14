@@ -29,7 +29,7 @@ public:
         deep(root, level, hash);
         int deepestLevel = 0;
         for (const auto& pair : hash) {
-            deepestLevel = std::max(deepestLevel, pair.first);
+            deepestLevel = max(deepestLevel, pair.first);
         }
         
         return hash[deepestLevel];
