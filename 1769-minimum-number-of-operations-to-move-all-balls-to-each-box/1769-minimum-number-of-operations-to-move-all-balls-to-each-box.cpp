@@ -6,12 +6,11 @@ public:
         vector<int> ans (n,0);
         for (int i = 0; i<n; i++){
             for (int j = 0; j<n; j++){
-                if (j != i && boxes[j] == '1'){
-                    tmp += abs(j-i);
+                if (boxes[j] == '1' && j != i){
+                    ans[i] += abs(j-i);
                 }
             }
-            ans[i] = tmp;
-            tmp = 0;
+            
         }
         return ans;
     }
