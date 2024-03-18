@@ -11,11 +11,13 @@ public:
                 sum = 0;
                 if (head->next && head->next->val == 0) {
                     head = head->next;
-                } else if (head->next) {
+                } 
+                else if (head->next) {
                     res->next = new ListNode(0);
                     res = res->next;
                 }
-            } else {
+            } 
+            else {
                 sum += head->val;
             }
             head = head->next;
