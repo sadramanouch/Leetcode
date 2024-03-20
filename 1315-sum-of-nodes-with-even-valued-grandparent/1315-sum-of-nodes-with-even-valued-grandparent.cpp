@@ -5,7 +5,9 @@ public:
     }
     
     int dfs(TreeNode* node, TreeNode* parent, TreeNode* grandparent) {
-        if (!node) return 0;
+        if (!node){
+            return 0;
+        }
         int sum = 0;
         if (grandparent && grandparent->val % 2 == 0) {
             sum += node->val;
