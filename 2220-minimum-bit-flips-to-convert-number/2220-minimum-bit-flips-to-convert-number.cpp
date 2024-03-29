@@ -3,8 +3,8 @@
 class Solution {
 public:
     int minBitFlips(int start, int goal) {
-        string startBinary = std::bitset<sizeof(int) * 8>(start).to_string();
-        string goalBinary = std::bitset<sizeof(int) * 8>(goal).to_string();
+        string startBinary = bitset<sizeof(int) * 8>(start).to_string();
+        string goalBinary = bitset<sizeof(int) * 8>(goal).to_string();
         int count = 0;
         int x = start ^ goal;
         while (x) {
