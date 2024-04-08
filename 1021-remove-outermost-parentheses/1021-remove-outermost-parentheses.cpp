@@ -1,7 +1,3 @@
-#include <string>
-
-using namespace std;
-
 class Solution {
 public:
     string removeOuterParentheses(string s) {
@@ -14,11 +10,13 @@ public:
                     tmp.push_back(c);
                 }
                 open++;
-            } else if (c == ')') {
+            } 
+            else if (c == ')') {
                 open--;
                 if (open > 0) {
                     tmp.push_back(c);
-                } else {
+                } 
+                else {
                     res += tmp;
                     tmp = "";
                 }
