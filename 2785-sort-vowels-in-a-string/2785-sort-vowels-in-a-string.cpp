@@ -1,31 +1,27 @@
 class Solution {
 public:
     string sortVowels(string s) {
-        // Separate vowels and consonants
         vector<char> vowels;
-        string consonants;
-        
+        string consonants;  
         for (char c : s) {
-            if (isVowel(c))
+            if (isVowel(c)){
                 vowels.push_back(c);
-            else
+            }
+            else{
                 consonants += c;
-        }
-        
-        // Sort the vowels
+            }    
+        } 
         sort(vowels.begin(), vowels.end());
-        
-        // Reconstruct the string
         string result;
         int vowelIndex = 0;
-        
         for (char c : s) {
-            if (isVowel(c))
+            if (isVowel(c)){
                 result += vowels[vowelIndex++];
-            else
+            }
+            else{
                 result += c;
+            }   
         }
-        
         return result;
     }
     
