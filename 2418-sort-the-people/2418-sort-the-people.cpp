@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
-        vector<std::pair<int, string>> people;
+        vector<pair<int, string>> people;
         for (size_t i = 0; i < names.size(); i++) {
             people.emplace_back(heights[i], names[i]);
         }
