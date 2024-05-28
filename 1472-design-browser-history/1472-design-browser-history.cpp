@@ -1,36 +1,35 @@
 class BrowserHistory {
+private: 
+    vector<string> browse;
+    int current; 
+    int maxInd;
 public:
     BrowserHistory(string homepage) {
-        history.push_back(homepage); // Initialize with the homepage
-        current = 0; // Current index in the history
-        max_index = 0; // Max index in the history that we can forward to
+        browse.push_back(homepage);
+        current = 0;
+        maxInd = 0;
     }
     
     void visit(string url) {
         current++;
-        if (current < history.size()) {
-            history[current] = url;
-        } 
-        else {
-            history.push_back(url);
+        if (current < browse.size()){
+            browse[current] = url;
         }
-        max_index = current;
+        else{
+            browse.push_back(url);
+        }
+        maxInd = current;
     }
     
     string back(int steps) {
-        current = max(0, current - steps);
-        return history[current];
+        current = max(0, current-steps);
+        return browse[current];
     }
     
     string forward(int steps) {
-        current = min(max_index, current + steps);
-        return history[current];
+        current = min(maxInd, current+steps);
+        return browse[current];
     }
-
-private:
-    vector<string> history; // Vector to store the browsing history
-    int current; // Current index in the history
-    int max_index; // Max index in the history that we can forward to
 };
 
 /**
