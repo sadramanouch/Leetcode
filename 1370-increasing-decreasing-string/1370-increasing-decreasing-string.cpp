@@ -9,7 +9,7 @@ public:
             hash[ch]++;
         }
         bool forward = true; 
-        while (n > 0) {
+        while (n) {
             if (forward) {
                 for (char ch = 'a'; ch <= 'z'; ++ch) {
                     if (hash[ch] > 0) {
