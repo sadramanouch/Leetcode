@@ -14,7 +14,7 @@ public:
     int DFS(TreeNode* root) {
         if (!root){
             return 0;
-        } 
+        }
         if (!root->left && !root->right){
             return root->val;
         }
@@ -22,10 +22,10 @@ public:
         int leftVal = DFS(root->left);
         int rightVal = DFS(root->right);
         
-        if (root->val == 2) {
+        if (root->val == 2){
             return leftVal || rightVal;
-        } 
-        else if (root->val == 3) {
+        }
+        if (root->val == 3){
             return leftVal && rightVal;
         }
         return 0;
