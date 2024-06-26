@@ -19,7 +19,7 @@ public:
         }
         int leftExcess = postOrder(root->left);
         int rightExcess = postOrder(root->right);
-        moves += std::abs(leftExcess) + std::abs(rightExcess);
+        moves += abs(leftExcess) + abs(rightExcess);
         return root->val + leftExcess + rightExcess - 1;
     }
 
