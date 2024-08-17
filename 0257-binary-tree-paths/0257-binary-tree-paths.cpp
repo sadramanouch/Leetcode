@@ -12,15 +12,21 @@
 class Solution {
 public:
     void DFS(TreeNode* root, string path, vector<string>& res) {
-        if (!root) return;
+        if (!root){
+            return;
+        }
         path += to_string(root->val);
         if (!root->left && !root->right) {
             res.push_back(path);
         } 
         else {
             path += "->";
-            if (root->left) DFS(root->left, path, res);
-            if (root->right) DFS(root->right, path, res);
+            if (root->left){
+                DFS(root->left, path, res);
+            }
+            if (root->right){
+                DFS(root->right, path, res);
+            }
         }
     }
 
